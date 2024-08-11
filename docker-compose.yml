@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  voting-app:
+    image: sauravsuman689/voteapp:v1
+    ports:
+      - 85:80
+  result-app:
+    image: sauravsuman689/resultapp:v1
+    ports:
+      - 86:80
+  worker-app:
+    image: sauravsuman689/resultapp:v1
+
+  redis:
+    image: redis
+
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
