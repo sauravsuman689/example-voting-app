@@ -10,7 +10,7 @@ services:
     ports:
       - 87:80
   worker-app:
-    image: sauravsuman689/resultapp:v1
+    image: sauravsuman689/workerapp:v1
 
   redis:
     image: redis
